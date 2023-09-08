@@ -1,13 +1,17 @@
-const http = require("http");
-
-const hostname = '127.0.0.1';
+const express = require('express');
+const app = express();
 const port = 3000;
+const cors = require('cors');
+const productsRoutes = require('./routes/products')
 
-const server = http.createServer((req, res) => {
-    res.statusCode = 200;
-})
+app.use(cors());
 
-server.listen(port, hostname, () => {
+app.use(express.json());
+app.use(express.urlencoded({extended: false}));
+
+app.use('/products', productsRoutes);
+
+app.listen(port, () => {
     console.log(`Server listening on port ${port}`);
 })
 
