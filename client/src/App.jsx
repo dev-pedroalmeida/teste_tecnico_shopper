@@ -1,6 +1,4 @@
-
 import './App.css'
-
 import ValidateForm from './components/ValidateForm'
 
 function App() {
@@ -8,7 +6,7 @@ function App() {
 
   return (
     <>
-      <div>
+      <div className='products'>
         <h1>Shopper</h1>
         <ValidateForm/>
       </div>

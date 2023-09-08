@@ -1,6 +1,7 @@
 import axios from 'axios';
 import { useState } from 'react';
 import Papa from 'papaparse';
+import './ValidateForm.css'
 
 function ValidateForm() {
 
@@ -59,7 +60,7 @@ function ValidateForm() {
     <div>
         ValidateForm
         <form>
-          <input type="file" name="novosPrecos" id="novosPrecos" onChange={handleFileChange} />    
+          <input type="file" name="novosPrecos" id="novosPrecos" onChange={handleFileChange} />
           <button type="button" onClick={validatePrices}>Validar</button>
         </form>
         {
