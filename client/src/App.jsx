@@ -1,14 +1,16 @@
 import './App.css'
+import Navbar from './components/Navbar'
+import ProductsList from './components/ProductsList'
 import ValidateForm from './components/ValidateForm'
 
 function App() {
-  
 
   return (
     <>
+      <Navbar />
       <div className='products'>
-        <h1>Shopper</h1>
-        <ValidateForm/>
+        <ProductsList />
+        <ValidateForm />
       </div>
     </>
   )

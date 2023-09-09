@@ -1,24 +1,74 @@
+form.val-form div {
+    display: flex;
+    justify-content: flex-end;
+    gap: 12px;
+}
+
 input[type=file] {
     width: 350px;
     max-width: 100%;
     color: #444;
     padding: 5px;
     background: #fff;
-    border-radius: 10px;
-    border: 1px solid #555;
-  }
+}
 
 input[type=file]::file-selector-button {
     margin-right: 20px;
-    border: none;
-    background: #00B780;
+    border: 1px solid #00B780;
+    background-color: #fff;
     padding: 10px 20px;
+    border-radius: 10px;
+    color: #00B780;
+    cursor: pointer;
+    transition: background .2s ease-in-out;
+}
+  
+input[type=file]::file-selector-button:hover {
+    background-color: #00B780;
+    color: #fff;
+}
+
+button {
+    padding: 8px 16px;
+    background-color: #00B780;
+    border: none;
     border-radius: 10px;
     color: #fff;
     cursor: pointer;
     transition: background .2s ease-in-out;
-  }
-  
-  input[type=file]::file-selector-button:hover {
-    background: #00B780;
-  }
+}
+
+button:not(:disabled):hover {
+    background-color: #03a776;
+}
+
+button:disabled {
+    cursor: not-allowed;
+    background-color: #03a7769c;
+}
+
+table.val-table {
+    border-collapse: collapse;
+    font-size: 0.9em;
+    min-width: 400px;
+}
+
+table.val-table thead tr {
+    background-color: #00B780;
+    color: #fff;
+    text-align: left;
+}
+
+table.val-table th, 
+table.val-table td {
+    padding: 12px 15px;
+}
+
+table.val-table tbody tr {
+    border-bottom: 1px solid #ffffff;
+}
+
+table.val-table tbody tr:nth-of-type(even) {
+    background-color: #f3f3f3;
+}
+
